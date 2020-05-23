@@ -1,0 +1,14 @@
+nav{
+    background: #2fc4b2;
+    padding: 20px;
+}
+.columna{
+    background: #ad6989;
+    color: #fee2b3;
+    padding: 20px;
+    width: 25%;
+    margin: 10px;
+}
+.padre{
+    display: flex;
+}

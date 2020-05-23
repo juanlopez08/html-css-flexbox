@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.contenedor{
+    width: 80%;
+    height: 500px;
+    background: #FF5C29;
+    margin: 50px auto;
+    display: flex;
+    /*flex-direction: row-reverse; */
+    flex-direction: row;
+    /*flex-direction: column; */
+    flex-wrap: wrap;
+    /*flex-wrap: nowrap;*/
+    /*justify-content: flex-start;*/ /*coloca los elementos al lado izquierdo*/
+    /*justify-content: flex-end;*/ /*coloca los elementos al lado derecho*/
+    /*justify-content: center;*/ /*Centra los elementos*/
+    /*justify-content: space-between; */ /*divide en formas iguales a los hijos*/
+    /*justify-content: space-around;*/ /*espacio proporcional entre los hijos*/
+    /*align-items: flex-end;*/ /*manda a los hijos al final*/
+    /*align-items: flex-start;*/ /*los hijos se quedan arriba*/
+    /*align-items: center; *//*centra a los hijos*/
+    /*align-items: stretch;*/ /*para que funcione se debe comentar el alto de los hijos*/
+    /*align-items: baseline;*/ /* alinea todos los hijos en base a la tipografia, para cambiar la tipografia use la clase otro y en el hijo c*/
+    align-content: flex-start; /*permite ubicar DOS lineas en donde se desee, flex-start/center/end */
+    /* tambien tiene align-content: space-between/around*/
+}
+
+.hijo{
+    background: #00B285;
+    width: 200px;
+    height: 100px;
+    color: #fff;
+    margin: 30px;
+    padding: 20px;
+    font-size: 40px;
+    text-align: center;
+}
+/*
+.otro{
+    font-size: 60px;
+}*/
