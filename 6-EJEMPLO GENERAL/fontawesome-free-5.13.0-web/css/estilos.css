@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box; /*para evitar el desbordamiento de las cajas unas con otras*/
+    
+}
+a{
+    text-decoration: none; /*quita el subrayado*/
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.padre{ 
+    display: flex; /*para iniciar flexbpx desde el padre*/
+    flex-flow: column nowrap; /* para mostrar en columnas y para que se adapte al tamanio establecido*/
+}
+    .header{
+        background: url(../../Imagenes/d.jpg);
+        background-position: center; /*centra la imagen*/
+        background-attachment: contain; /*fija la imagen en el contenedor*/
+        background-size: cover;
+        display: flex; /* activar flexbox dentro del header*/
+        flex-flow: column nowrap ;
+    }
+        .menu{
+            background: rgba(0,0,0,.1); /*rgb y un degradado*/
+            display: flex; /*activa dentro del menu y muestra los elementos en horizontal*/
+            flex-flow: row nowrap; /* para mostrar en una misma linea*/
+            height: 60px; /*aumenta el tamanio del menu*/
+            align-items: center; /*centrar todos los hijos que esten dentro del menu*/
+            border-bottom: 1px solid rgba(255,255,255,.5); /*linea blanca divisora del menu*/
+        }
+            .logo{
+                flex: 1 1 auto; /*definir tamanio de los hijos*/
+                
+            }
+                .logo a{ /*dentro del logo y del ancla*/
+                    color: #fff;
+                    font-size: 30px;
+                }
+                .logo a:hover{
+                    color:#343434;
+                }
+            .nav{
+                flex: 5 1 auto; /*definir mayor tamanio(5) para este hijo*/
+            }
+                .nav a{
+                    color: #fff;
+                    font-size: 11px;
+                    text-transform: uppercase; /*mayusculas*/
+                    padding: 0 10px;
+                    letter-spacing: 2px;
+                }
+                .nav a:hover{
+                    color: #343434;
+                }
+
+            .social{
+                flex: 1 1 auto;
+                display: flex;
+            }
+                .social a{
+                    color: #fff;
+                    font-size: 18px;
+                    padding: 0 5px;;
+                }
+                social a:hover{
+                    color: #343434;
+                }
+
+        .texto-principal{
+            background: #c70039;
+        }
+            h1{
+                background: #ff5733;
+            }
+
+    .section{
+        background: #000;
+        display: flex; /*inicia flexbox en la section*/
+    }
+        .articulos{
+            background: #142850;
+            flex: 2 1 auto; /*se fijan las dimensiones, el 2 es para que sea el doble del aside*/
+            display: flex; /*muestra en linea horizontal*/
+            flex-flow: row wrap; /*row los pone uno al lado del otro, wrap hace que si no cabe una caja, la pasa abajo*/
+        }
+            .article{
+                background: #27496d;
+                flex: 1 1 40%; /*define las dimensiones de los articulos, se usa 40% para que solo hayan 2 articulos en horizontal y que el resto baje con el WRAP*/
+            }
+            .navegacion{
+                background: #00909e;
+                flex: 1 1 100%; /*define las dimensiones del navegador, se usa 100% en vez de auto para que ocupe esa dimension*/
+            }
+
+        .aside{
+            background: #342ead;
+            flex: 1 1 auto;
+        }
+            .publicidad{
+                background: #ea6227;
+            }
+
+    .footer{
+        background: #000;
+        display: flex; /*activa flex en el padre del pie*/
+        justify-content: center; /*centra todos los hijos*/
+    }
+        .pie{
+            background: #2fc4b2;
+            width: 300px; /*define el ancho*/
+        }
+
+@media all and (max-width: 800px){ /*condiciones de 0px a 800px*/
+    .section{
+        flex-direction: column; /*hace que el aside baje en forma de columna*/
+    }
+    .menu{
+        flex-direction: column; /*muestra el menu en forma de columna*/
+        height: auto; /*ajusta el alto de forma automatica*/
+    }
+    .aside{
+        display: flex; /*muestra la publicidad del aside una al lado de otra*/
+        justify-content: center; /*centra las publicidades*/
+    }
+}
+
+@media all and (max-width: 600px){/*condiciones de 0px a 600px*/
+    .articulos{
+        flex-direction: column; /*mostrar articulos en forma de coumna, uno bajo el otro*/
+    }
+}
+
+@media all and (max-width: 400px){/*condiciones de 0px a 400px*/
+    .aside{
+        flex-direction: column; /*mostrar publicidad en forma de coumna, uno bajo el otro*/
+    }
+}
